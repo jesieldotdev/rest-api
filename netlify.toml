@@ -1,2 +1,8 @@
 [build]
- functions="functions"
+  functions = "functions" # pasta onde as funções serverless serão construídas
+  publish = "public"      # pasta de saída para arquivos estáticos (pode ser ajustada conforme seu projeto)
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
